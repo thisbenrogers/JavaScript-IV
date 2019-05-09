@@ -24,6 +24,14 @@ class Instructor extends Person {
   grade(student, subject) {
     return `${student.name} receives a perfect score on ${subject}`;
   }
+  adjustGrade(student) {
+    student.grade = Math.floor(
+      student.grade + (Math.random() * (7 - -17) + -17)
+    );
+    return `${student.name} now has a grade of ${
+      student.grade
+    } for this class.`;
+  }
 }
 
 class Student extends Person {
@@ -32,6 +40,7 @@ class Student extends Person {
     this.previousBackground = studentObj.previousBackground;
     this.className = studentObj.className;
     this.listsSubjects = studentObj.listsSubjects;
+    this.grade = studentObj.grade;
   }
   listsSubjects() {
     this.listsSubjects.forEach(function(value) {
@@ -43,6 +52,17 @@ class Student extends Person {
   }
   sprintChallenge(subject) {
     return `${this.name} has begun sprint challenge on ${subject}`;
+  }
+  graduate() {
+    if (this.grade < 70) {
+      return `Get better grades, ${this.name}. This go 'round you only made a ${
+        this.grade
+      }. 👎`;
+    } else {
+      return `Congratulations ${this.name},since your grade is ${
+        this.grade
+      } you can graduate! ✨`;
+    }
   }
 }
 
@@ -87,7 +107,8 @@ const betty = new Student({
   gender: "F",
   previousBackground: "Welder",
   className: "WEB20",
-  listsSubjects: ["CSS", "HTML", "JS", "React"]
+  listsSubjects: ["CSS", "HTML", "JS", "React"],
+  grade: 95
 });
 
 const bobby = new Student({
@@ -97,7 +118,8 @@ const bobby = new Student({
   gender: "M",
   previousBackground: "Synthpunk Frontman",
   className: "WEB20",
-  listsSubjects: ["CSS", "HTML", "JS", "React", "Vue"]
+  listsSubjects: ["CSS", "HTML", "JS", "React", "Vue"],
+  grade: 92
 });
 
 const bertrand = new Student({
@@ -107,7 +129,8 @@ const bertrand = new Student({
   gender: "they/their",
   previousBackground: "Burlesque Dancer",
   className: "WEB20",
-  listsSubjects: ["CSS", "HTML", "JS", "React", "Angular"]
+  listsSubjects: ["CSS", "HTML", "JS", "React", "Angular"],
+  grade: 99
 });
 
 const charlie = new ProjectManager({
@@ -129,7 +152,7 @@ const charlotte = new ProjectManager({
   gender: "F",
   specialty: "Kicking Ass",
   favLanguage: "JavaScript",
-  catchPhrase: "I'm gonna kick your ass",
+  catchPhrase: "I'm gonna kick your ass (not really)",
   gradClassName: "WEB18",
   favInstructor: "Dan Levy"
 });
@@ -147,3 +170,20 @@ log(betty.PRAssignment("React debugging")); // Betty has submitted a PR for Reac
 log(charlie.grade(charlotte, "Javascript 3")); // Charlotte receives a perfect score on Javascript 3
 log(annie.favLanguage); // Ubbi Dubbi
 log(charlotte.catchPhrase); // I'm gonna kick your ass
+
+log(annie.adjustGrade(betty)); // The following adjusts grades enough for grades to rise and fall substantially
+log(arthur.adjustGrade(bobby));
+log(charlie.adjustGrade(bertrand));
+log(charlotte.adjustGrade(betty));
+log(annie.adjustGrade(bobby));
+log(arthur.adjustGrade(bertrand));
+log(charlie.adjustGrade(betty));
+log(charlotte.adjustGrade(bobby));
+log(annie.adjustGrade(bertrand));
+log(arthur.adjustGrade(betty));
+log(charlie.adjustGrade(bobby));
+log(charlotte.adjustGrade(bertrand));
+
+log(betty.graduate()); // Prints whether or not the student can graduate
+log(bobby.graduate());
+log(bertrand.graduate());

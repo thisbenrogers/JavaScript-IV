@@ -25,7 +25,7 @@ class GameObject {
     return `${this.name} was removed from the game.`;
   }
 }
-
+// Refactored from:
 // function GameObject(obj) {
 //   this.createdAt = obj.createdAt;
 //   this.name = obj.name;
@@ -52,7 +52,7 @@ class CharacterStats extends GameObject {
     return `${this.name} took damage, and has ${this.healthpoints}`;
   }
 }
-
+// Refactored from:
 // function CharacterStats(characterObj) {
 //   GameObject.call(this, characterObj);
 //   this.healthPoints = characterObj.healthPoints;
@@ -84,7 +84,7 @@ class Humanoid extends CharacterStats {
     return `${this.name} offers a greeting in ${this.language}`;
   }
 }
-
+// Refactored from:
 // function Humanoid(humanoidObj) {
 //   CharacterStats.call(this, humanoidObj);
 //   this.team = humanoidObj.team;
@@ -124,7 +124,7 @@ class Villain extends Humanoid {
     }
   }
 }
-
+// Refactored from:
 // function Villain(villainObj) {
 //   Humanoid.call(this, villainObj);
 // }
@@ -152,7 +152,7 @@ class Hero extends Humanoid {
     }
   }
 }
-
+// Refactored from:
 // function Hero(heroObj) {
 //   Humanoid.call(this, heroObj);
 // }
