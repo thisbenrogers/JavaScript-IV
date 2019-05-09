@@ -29,7 +29,7 @@ class Instructor extends Person {
 class Student extends Person {
   constructor(studentObj) {
     super(studentObj);
-    this.previousBackground = studentObj.perviousBackground;
+    this.previousBackground = studentObj.previousBackground;
     this.className = studentObj.className;
     this.listsSubjects = studentObj.listsSubjects;
   }
@@ -141,6 +141,7 @@ log(charlotte.gender);
 log(charlie.standUp("WEB20_AH"));
 log(bertrand.age);
 log(bobby.speak());
+log(bobby.previousBackground);
 log(charlotte.debugsCode(bobby, "preprocessing"));
 log(betty.PRAssignment("React debugging"));
 log(charlie.grade(charlotte, "Javascript 3"));
