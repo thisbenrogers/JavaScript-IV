@@ -22,7 +22,7 @@ class GameObject {
     this.dimensions = obj.dimensions;
   }
   destroy() {
-    console.log(`${this.name} was removed from the game.`);
+    return `${this.name} was removed from the game.`;
   }
 }
 
@@ -224,5 +224,22 @@ console.log(mage.fight());
 console.log(archer.fight());
 console.log(swordsman.fight());
 console.log(mage.fight());
+console.log(archer.fight());
+console.log(swordsman.fight());
+console.log(archer.fight());
+console.log(swordsman.fight());
+console.log(archer.fight());
+console.log(swordsman.fight());
+console.log(archer.fight());
+console.log(swordsman.fight());
 console.log(mage.fight());
 console.log(mage.fight());
+console.log(archer.fight());
+console.log(swordsman.fight());
+console.log(archer.fight());
+console.log(swordsman.fight());
+console.log(swordsman.fight());
+console.log(swordsman.fight());
+console.log(archer.fight());
+console.log(archer.fight());
+console.log(archer.fight());
