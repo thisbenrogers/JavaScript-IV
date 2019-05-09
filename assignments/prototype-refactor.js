@@ -8,13 +8,12 @@ Prototype Refactor
 
 */
 
-/*
-  === GameObject ===
-  * createdAt
-  * name
-  * dimensions (These represent the character's size in the video game)
-  * destroy() // prototype method that returns: `${this.name} was removed from the game.`
-*/
+/* === GameObject ===
+ * createdAt
+ * name
+ * dimensions (These represent the character's size in the video game)
+ * destroy() // prototype method that returns: `${this.name} was removed from the game.`
+ */
 class GameObject {
   constructor(obj) {
     this.createdAt = obj.createdAt;
@@ -63,15 +62,14 @@ class CharacterStats extends GameObject {
 //   return `${this.name} took damage.`;
 // };
 
-/*
-  === Humanoid (Having an appearance or character resembling that of a human.) ===
-  * team
-  * weapons
-  * language
-  * greet() // prototype method -> returns the string '<object name> offers a greeting in <object language>.'
-  * should inherit destroy() from GameObject through CharacterStats
-  * should inherit takeDamage() from CharacterStats
-*/
+/* === Humanoid (Having an appearance or character resembling that of a human.) ===
+ * team
+ * weapons
+ * language
+ * greet() // prototype method -> returns the string '<object name> offers a greeting in <object language>.'
+ * should inherit destroy() from GameObject through CharacterStats
+ * should inherit takeDamage() from CharacterStats
+ */
 
 class Humanoid extends CharacterStats {
   constructor(humanoidObj) {

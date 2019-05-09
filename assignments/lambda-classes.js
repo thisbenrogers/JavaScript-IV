@@ -169,7 +169,8 @@ log(charlotte.debugsCode(bobby, "preprocessing")); // Charlotte debugs Bobby's c
 log(betty.PRAssignment("React debugging")); // Betty has submitted a PR for React debugging
 log(charlie.grade(charlotte, "Javascript 3")); // Charlotte receives a perfect score on Javascript 3
 log(annie.favLanguage); // Ubbi Dubbi
-log(charlotte.catchPhrase); // I'm gonna kick your ass
+log(charlotte.catchPhrase); // I'm gonna kick your ass (not really)
+log(bertrand.listsSubjects);
 
 log(annie.adjustGrade(betty)); // The following adjusts grades enough for grades to rise and fall substantially
 log(arthur.adjustGrade(bobby));
