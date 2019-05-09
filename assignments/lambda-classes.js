@@ -136,12 +136,14 @@ const charlotte = new ProjectManager({
 
 const log = console.log;
 
-log(annie.name);
-log(charlotte.gender);
-log(charlie.standUp("WEB20_AH"));
-log(bertrand.age);
-log(bobby.speak());
-log(bobby.previousBackground);
-log(charlotte.debugsCode(bobby, "preprocessing"));
-log(betty.PRAssignment("React debugging"));
-log(charlie.grade(charlotte, "Javascript 3"));
+log(annie.name); // Annie
+log(charlotte.gender); // F
+log(charlie.standUp("WEB20_AH")); // Charlie announces to WEB20_AH, @channel standy times!​​​​​
+log(bertrand.age); // 87
+log(bobby.speak()); // Hello my name is Bobby, I am from Slidell, LA.
+log(bobby.previousBackground); // Synthpunk Frontman
+log(charlotte.debugsCode(bobby, "preprocessing")); // Charlotte debugs Bobby's code on preprocessing
+log(betty.PRAssignment("React debugging")); // Betty has submitted a PR for React debugging
+log(charlie.grade(charlotte, "Javascript 3")); // Charlotte receives a perfect score on Javascript 3
+log(annie.favLanguage); // Ubbi Dubbi
+log(charlotte.catchPhrase); // I'm gonna kick your ass
